@@ -1,0 +1,307 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*_____________________________*/
+
+body {
+	background: url(../img/background.jpg);
+	background-size: cover;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+}
+
+#kong, #godzilla {
+	width: 600px;
+	position: fixed;
+}
+
+#kong {
+	position: fixed;
+	left: 0;
+	z-index: 10;
+    animation: breatheAnimation 3s infinite ease-in-out; /* Animation de respiration */
+}
+
+    @keyframes breatheAnimation {
+        0%, 100% {
+            transform: scaleY(1); /* Hauteur normale */
+        }
+        50% {
+            transform: scaleY(1.03); /* Légère expansion à mi-chemin */
+        }
+    }
+
+#godzilla {
+	position: fixed;
+	right: 0;
+	top: 30px;
+	z-index: 10;
+    animation: breatheAnimation 3s infinite ease-in-out; /* Animation de respiration */
+}
+
+#logo-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: scaleAnimation 1s infinite alternate; /* Animation en boucle */
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1); /* Échelle normale */
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.1); /* Échelle normale à la fin */
+    }
+}
+
+
+#logo {
+	width: 100%;
+	height: 204px;
+	background: #060606;
+	position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav {
+	background: #060606;
+	width: 604px;
+	text-align: center;
+	padding-block: 20px;
+}
+
+li {
+	display: inline;
+}
+
+li a {
+	color: #FEFDDF;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 20px;
+	margin-inline: 20px;
+	transition: 0.3s;
+}
+
+li a:hover {
+	color: #AAA985;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#join {
+	position: relative;
+	top: 410px;
+}
+
+#button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-block: 20px;
+}
+
+button {
+	color: #FEFDDF;
+	background: #060606;
+	font-size: 20px;
+	text-transform: uppercase;
+	border: none;
+	padding: 15px;
+	margin-inline: 10px;
+	font-style: italic;
+	font-weight: 700;
+	transition: 0.3s;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+
+button:hover {
+	background: #62554A;
+}
+
+button img {
+	padding-right: 10px;
+}
+
+#text {
+	max-width: 602px;
+	font-size: 24px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+table {
+	background: #060606;
+	color: #FEFDDF;
+	font-size: 20px;
+	width: 541px;
+}
+
+#table {
+	background: #060606;
+	width: 603px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+
+th {
+	text-align: left;
+}
+
+td {
+	padding-left: 25px;
+}
+
+  tr {
+    border-bottom: 1px solid #FEFDDF;
+    padding: 10px;
+  }
+
+  th {
+  	padding-block: 10px;
+  	border-bottom-width: 500px;
+  }
+
+  @media screen and (max-width: 800px) {
+
+  	body {
+  		background: #ABEBE6;
+  	}
+
+  	nav {
+  		width: 100%;
+  	}
+
+  	#logo-img {
+  		width: 300px;
+  	}
+
+  	#godzilla {
+  		display: none;
+  	}
+
+  	#kong {
+  		display: none;
+  	}
+
+  	#button {
+  		display: flex;
+  		flex-direction: column;
+  	}
+
+  	button {
+  		margin-block: 10px;
+  	}
+
+  	#table {
+  		width: 100%;
+  	}
+
+  	table{
+  		width: 200px;
+  		font-size: 16px;
+  	}
+
+  	td {
+  		padding: 0;
+  	}
+
+  	#title {
+  		width: 350px;
+  	}
+
+  	li {
+  		 display: block;
+  		 margin-block: 2px;
+  	}
+
+  	#join {
+    position: relative;
+    top: 280px;
+}
+
+#text {
+	font-size: 19px;
+	max-width: 330px;
+}
+
+
+
+
+
+}
